@@ -3,7 +3,6 @@ import react from '@vitejs/plugin-react'
 import { VitePWA } from 'vite-plugin-pwa'
 
 export default defineConfig({
-  // GitHub Pages project site
   base: '/GrowTogether/',
 
   plugins: [
@@ -56,9 +55,7 @@ export default defineConfig({
         globPatterns: [
           '**/*.{js,css,html,svg,png,ico,webmanifest}',
         ],
-
         navigateFallback: 'index.html',
-
         cleanupOutdatedCaches: true,
       },
     }),
