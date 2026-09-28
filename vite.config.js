@@ -11,20 +11,12 @@ export default defineConfig({
     VitePWA({
       registerType: 'autoUpdate',
 
-      includeAssets: [
-        'favicon.svg',
-        'icons/*.png',
-      ],
-
       manifest: {
         name: 'GrowTogether',
         short_name: 'GrowTogether',
-        description:
-          'A romantic daily routine and career growth planner for two people growing together.',
-
+        description: 'A romantic daily routine and career growth planner for two people growing together.',
         theme_color: '#BE185D',
         background_color: '#FFF7FB',
-
         display: 'standalone',
         orientation: 'portrait',
 
@@ -35,29 +27,26 @@ export default defineConfig({
           {
             src: '/GrowTogether/icons/icon-192.png',
             sizes: '192x192',
-            type: 'image/png',
+            type: 'image/png'
+          },
+          {
+            src: '/GrowTogether/icons/icon-512.png',
+            sizes: '512x512',
+            type: 'image/png'
           },
           {
             src: '/GrowTogether/icons/icon-512.png',
             sizes: '512x512',
             type: 'image/png',
-          },
-          {
-            src: '/GrowTogether/icons/icon-512.png',
-            sizes: '512x512',
-            type: 'image/png',
-            purpose: 'maskable',
-          },
-        ],
+            purpose: 'maskable'
+          }
+        ]
       },
 
       workbox: {
-        globPatterns: [
-          '**/*.{js,css,html,svg,png,ico,webmanifest}',
-        ],
-        navigateFallback: 'index.html',
-        cleanupOutdatedCaches: true,
-      },
-    }),
-  ],
+        navigateFallback: '/GrowTogether/index.html',
+        cleanupOutdatedCaches: true
+      }
+    })
+  ]
 })
